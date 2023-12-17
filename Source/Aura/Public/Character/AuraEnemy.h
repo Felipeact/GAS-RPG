@@ -19,11 +19,14 @@ public:
 
 	AAuraEnemy();
 
+	/** Enemy Interface*/
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
+	/** End Enemy Interface*/
 
-	UPROPERTY(BlueprintReadOnly)
-	bool bHighlighted = false;
+protected:
+	virtual void BeginPlay() override;
+	
 };
-
+ 
 
