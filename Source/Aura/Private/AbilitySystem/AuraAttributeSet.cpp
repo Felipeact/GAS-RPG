@@ -1,13 +1,11 @@
 // Copyright  ByViana
-
-
+ 
 #include "AbilitySystem/AuraAttributeSet.h"
 
 #include "AbilitySystemBlueprintLibrary.h"
 #include "GameFramework/Character.h"
 #include "GameplayEffectExtension.h"
 #include "Net/UnrealNetwork.h"
-#include "AuraAttributeSet.h"
 
 UAuraAttributeSet::UAuraAttributeSet()
 {
