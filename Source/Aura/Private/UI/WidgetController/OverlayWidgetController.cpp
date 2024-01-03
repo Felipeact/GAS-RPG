@@ -40,11 +40,13 @@ AuraAttributeSet->GetHealthAttribute()).AddUObject(this, &UOverlayWidgetControll
 		{
 			for ( const FGameplayTag& Tag : AssetTags)
     		{
-       			const FString Msg = FString::Printf(TEXT("Get Tag: %s"), *Tag.ToString());
-        		GEngine->AddOnScreenDebugMessage(-1, 8.f, FColor::Blue, Msg);
+				FGameplayTag MessageTag= FGameplayTag::RequestGameplayTag(FName("Message"));
+				if (Tag.MatchesTag(MessageTag))
+				{
+					const FUIWidgetRow* Row = GetDataTableRowByTag<FUIWidgetRow>(MessageWidgetDataTable, Tag);
+					MessageWidgetRowDelegate.Broadcast(*Row);
 
-
-				FUIWidgetRow* Row = GetDataTableRowByTag<FUIWidgetRow>(MessageWidgetDataTable, Tag);
+				}
     		}
 		}
 	);
