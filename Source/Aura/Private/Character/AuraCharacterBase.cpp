@@ -1,7 +1,7 @@
 // Copyright  ByViana
 
 
-#include "Character/\AuraCharacterBase.h"
+#include "Character/AuraCharacterBase.h"
 
 	AAuraCharacterBase::AAuraCharacterBase()
 {
@@ -25,4 +25,7 @@ void AAuraCharacterBase::BeginPlay()
 	
 }
 
+void AAuraCharacterBase::InitAbilityActorInfo()
+{
+}
 
