@@ -18,5 +18,5 @@ public:
 
 	virtual void BindCallbacksToDependencies() override;
 
-	virtual void BroadCastInitialValues() override;
+	virtual void BroadcastInitialValues() override;
 };

@@ -8,7 +8,7 @@ void UAttributeMenuWidgetController::BindCallbacksToDependencies()
 
 }
 
-void UAttributeMenuWidgetController::BroadCastInitialValues()
+void UAttributeMenuWidgetController::BroadcastInitialValues()
 {
 
 }
