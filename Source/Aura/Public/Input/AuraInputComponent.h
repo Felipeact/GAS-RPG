@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "EnhancedInputComponent.h"
-#include "AuraInputComponent.h"
+#include "AuraInputConfig.h"
 #include "AuraInputComponent.generated.h"
 
 /**
@@ -29,22 +29,22 @@ inline void UAuraInputComponent::BindAbilityActions(const UAuraInputConfig* Inpu
 
 	for ( const FAuraInputAction& Action : InputConfig->AbilityInputActions)
 	{
-		if(Action.InputAction && Action.InputAction.IsValid())
+		if(Action.InputAction && Action.InputTag.IsValid())
 		{
 
 			if (PressedFunc)
 			{
-				BindAction(Action.InputAction, ETriggerEvent::Started,  Object, PressedFunc, Action.InputTag)
+				BindAction(Action.InputAction, ETriggerEvent::Started,  Object, PressedFunc, Action.InputTag);
 			}
 
 			if (ReleasedFunc)
 			{
-				BindAction(Action.InputAction, ETriggerEvent::Completed,  Object, ReleasedFunc, Action.InputTag)
+				BindAction(Action.InputAction, ETriggerEvent::Completed,  Object, ReleasedFunc, Action.InputTag);
 			}
 
 			if( HeldFunc) 
 			{
-				BindAction(Action.InputAction, ETriggerEvent::Triggered,  Object, HeldFunc, Action.InputTag)
+				BindAction(Action.InputAction, ETriggerEvent::Triggered,  Object, HeldFunc, Action.InputTag);
 			}
 
 			
