@@ -8,7 +8,7 @@
 // Sets default values
 AAuraProjectile::AAuraProjectile()
 {
- 	
+	
 	PrimaryActorTick.bCanEverTick = false;
 	bReplicates = true;
 
@@ -22,7 +22,8 @@ AAuraProjectile::AAuraProjectile()
 
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>("ProjectileMovement");
 	ProjectileMovement->InitialSpeed = 550.f;
-	ProjectileMovement->MaxSpeed = 550.f;
+	ProjectileMovement->MaxSpeed = 550.f
+		;
 	ProjectileMovement->ProjectileGravityScale = 0.f;
 
 }
